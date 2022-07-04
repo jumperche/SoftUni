@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="de.uni.mannheim.rz.krum.jas" type="repository">
+    <properties maven-id="de.uni-mannheim.rz.krum:jas:2.7.130" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/uni-mannheim/rz/krum/jas/2.7.130/jas-2.7.130.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.17.2/log4j-api-2.17.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
