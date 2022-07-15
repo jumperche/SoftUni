@@ -1,7 +1,7 @@
 package SoftuniFundamentals;
 
 import java.util.*;
-
+//You will receive a key (integer) and n characters afterward. Add the key to each of the characters and append them to the message. At the end print the message, which you decrypted.
 public class DecryptingMessages {
     public static void main ( String[] args ) {
         Scanner scanner = new Scanner ( System.in );

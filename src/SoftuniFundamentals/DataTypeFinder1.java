@@ -1,7 +1,13 @@
 package SoftuniFundamentals;
 
 import java.util.*;
-
+//You will receive input until you receive "END". Find what data type is the input. Possible data types are:
+//•	Integer
+//•	Floating point
+//•	Characters
+//•	Boolean
+//•	Strings
+//Print the result in the following format: "{input} is {data type} type".
 public class DataTypeFinder1 {
     public static void main ( String[] args ) {
         Scanner scanner = new Scanner ( System.in );
