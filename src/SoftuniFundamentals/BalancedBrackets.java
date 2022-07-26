@@ -10,6 +10,7 @@ public class BalancedBrackets {
     public static void main ( String[] args ) {
         Scanner scanner = new Scanner ( System.in );
         int line = Integer.parseInt ( scanner.nextLine ( ) );
+
         boolean open = false;
         boolean close = false;
         boolean is = false;
