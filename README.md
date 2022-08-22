@@ -1,1 +1,1 @@
-# SoftUni fundamentals kurs
+# SoftUni basic and fundamentals kurs
