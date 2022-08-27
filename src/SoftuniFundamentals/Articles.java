@@ -13,6 +13,7 @@ package SoftuniFundamentals;
 // On the next line, you will get a number n. On the next n lines, you will get
 // one of the following commands: "Edit: {new content}"; "ChangeAuthor: {new author}"; "Rename: {new title}".
 // At the end, print the final article.
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -20,32 +21,33 @@ import java.util.stream.Collectors;
 
 public class Articles {
     public static void main ( String[] args ) {
-        Scanner scanner = new Scanner(System.in);
-        List<String> list = Arrays.stream(scanner.nextLine().split(",")).map( value -> value)
-                .collect( Collectors.toList());
-        int n=Integer.parseInt ( scanner.nextLine () );
-        Article ar=new Article ( list.get ( 0) , list.get ( 1) , list.get ( 2) );
+        Scanner scanner = new Scanner ( System.in );
+        List< String > list = Arrays.stream ( scanner.nextLine ( ).split ( "," ) ).map ( value -> value )
+                .collect ( Collectors.toList ( ) );
+        int n = Integer.parseInt ( scanner.nextLine ( ) );
+        Article ar = new Article ( list.get ( 0 ) , list.get ( 1 ) , list.get ( 2 ) );
         for ( int i = 0 ; i < n ; i++ ) {
-            List<String> input = Arrays.stream(scanner.nextLine().split(":")).map( value -> value)
-                    .collect( Collectors.toList());
+            List< String > input = Arrays.stream ( scanner.nextLine ( ).split ( ":" ) ).map ( value -> value )
+                    .collect ( Collectors.toList ( ) );
 
-            switch (input.get ( 0 )){
+            switch (input.get ( 0 )) {
                 case "Edit":
-                    ar.edit ( input.get ( 1)  );
+                    ar.edit ( input.get ( 1 ) );
                     break;
                 case "ChangeAuthor":
-                    ar.changeAuthor ( input.get ( 1) );
+                    ar.changeAuthor ( input.get ( 1 ) );
                     break;
                 case "Rename":
-                    ar.rename ( input.get ( 1) );
+                    ar.rename ( input.get ( 1 ) );
                     break;
 
             }
 
         }
-        System.out.println (ar.toString (  ));
+        System.out.println ( ar.toString ( ) );
     }
-    public static class Article{
+
+    public static class Article {
         private String title;
         private String content;
         private String author;
@@ -79,20 +81,24 @@ public class Articles {
         public String getAuthor () {
             return author;
         }
-        public void edit(String content){
-           this.setContent ( content );
+
+        public void edit ( String content ) {
+            this.setContent ( content );
         }
-        public void changeAuthor(String author){
-            this.setAuthor (author);
+
+        public void changeAuthor ( String author ) {
+            this.setAuthor ( author );
         }
-        public void rename(String title){
+
+        public void rename ( String title ) {
             this.setTitle ( title );
         }
-        @Override
-        public String  toString( ){
 
-           String print=this.title+" -"+this.content+":"+this.author ;
-           return print;
+        @Override
+        public String toString () {
+
+            String print = this.title + " -" + this.content + ":" + this.author;
+            return print;
         }
     }
 }
