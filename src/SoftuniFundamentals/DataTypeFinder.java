@@ -16,37 +16,36 @@ public class DataTypeFinder {
         int x = -1;
 
         while ( !name.equals ( "END" ) ) {
-            if ( name.charAt ( 0 ) >= 58 && name.charAt ( 0 ) <= 127 ) {
+            if ( name.charAt ( 0 ) >= 58 || name.charAt (0 ) <48&&name.charAt ( 0 )!=45&&(name.charAt ( 1 )>= 58 || name.charAt (1 ) <48)){
                 if ( name.length ( ) == 1 ) {
                     System.out.println ( name + " is character type" );
                 } else if ( name.equals ( "true" ) || name.equals ( "false" ) ) {
                     System.out.println ( name + " is boolean type" );
-                } else {
+                }else
+                {
                     System.out.println ( name + " is string type" );
                 }
             }
-
-
-            if ( name.charAt ( 0 ) >= 48 && name.charAt ( 0 ) <= 57 || name.charAt ( 0 ) == 45&&name.charAt ( 1 ) >= 48 && name.charAt ( 1 ) <= 57 ) {
-                for ( int i = 1 ; i < name.length ( ) - 1 ; i++ ) {
+            if ( name.charAt ( 0 ) >= 48 && name.charAt ( 0 ) <= 57 || name.charAt ( 0 ) == 45 ) {
+                for ( int i = 0 ; i < name.length ( ) - 1 ; i++ ) {
                     if ( name.charAt ( i ) == '.' || name.charAt ( i ) == ',' ) {
                         x = i;
-
+                        //System.out.println (name+" is Floating point type");
                         break;
-                    } else {
-                        System.out.println ( name + " is string" );
                     }
 
                 }
-            }
-            if ( x == -1 ) {
-                System.out.println ( name + " is integer type" );
-            } else {
-                System.out.println ( name + " is floating point type" );
+                if ( x == -1 ) {
+                    System.out.println ( name + " is integer type" );
+                } else {
+                    System.out.println ( name + " is floating point type" );
+                }
+
             }
 
-
-            name = scanner.nextLine ( );
+            name=scanner.nextLine ();
         }
     }
 }
+
+
