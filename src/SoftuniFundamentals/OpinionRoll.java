@@ -1,6 +1,7 @@
 package SoftuniFundamentals;
 //Using the Person class, write a program that reads from the console N lines of personal
 // information and then prints all people whose age is more than 30 years.
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -18,7 +19,9 @@ public class OpinionRoll {
                 Person per = new Person ( name , age );
                 System.out.println ( per.printPerson ( ) );
             }
-
+           // persons.stream ( ).filter ( person -> person.getAge ( ) > 30 )
+             //       .sorted ( ( p1 , p2 ) -> p1.getName ( ).compareTo ( p2.getName ( ) ) )
+             //       .forEach ( person -> System.out.println ( person.printPerson ( ) ) );
         }
 
     }
