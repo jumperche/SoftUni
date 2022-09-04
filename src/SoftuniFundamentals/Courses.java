@@ -19,11 +19,15 @@ public class Courses {
             input = (List< String >) Arrays.stream ( scanner.nextLine ( ).split ( " : " ) ).collect ( Collectors.toList ( ) );
     }
 
-        for ( Map.Entry< String, List< String > > entry : map.entrySet ( ) ) {
-            System.out.printf ( "%s: %d%n%s%n",entry.getKey (),entry.getValue ().size (),String.join ( "\n-- ",entry.getValue () ));
-
-        }
-
+//        for ( Map.Entry< String, List< String > > entry : map.entrySet ( ) ) {
+//            System.out.printf ( "%s: %d%n%s%n",entry.getKey (),entry.getValue ().size (),String.join ( "\n-- ",entry.getValue () ));
+//
+//        }
+        map.entrySet ( ).stream ( )
+                .forEach ( entry -> {
+                    System.out.printf ( "%s: %d%n" , entry.getKey ( ) , entry.getValue ( ).size ( ) );
+                    entry.getValue ( ).forEach ( player -> System.out.println ( "-- " + player ) );
+                } );
 
     }
 }
