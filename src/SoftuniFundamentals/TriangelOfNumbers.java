@@ -1,5 +1,5 @@
 package SoftuniFundamentals;
-
+//Write a program that receives a number – n and prints a triangle from 1 to n as in the examples.
 import java.util.*;
 
 public class TriangelOfNumbers {

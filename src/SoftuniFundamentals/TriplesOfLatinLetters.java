@@ -1,5 +1,5 @@
 package SoftuniFundamentals;
-
+//Write a program to read an integer n and print all triples of the first n small Latin letters, ordered alphabetically:
 import java.util.*;
 
 public class TriplesOfLatinLetters {
@@ -15,12 +15,7 @@ public class TriplesOfLatinLetters {
                     System.out.printf ("%c%c%c", (char)ch,(char)cha,(char)chars);
                     System.out.println ( );
                 }
-
-
-
             }
-
-
         }
     }
 }

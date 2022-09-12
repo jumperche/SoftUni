@@ -1,5 +1,6 @@
 package SoftuniFundamentals;
-
+//We are placing N orders at a time. You need to calculate the price on the following formula:
+//((daysInMonth * capsulesCount) * pricePerCapsule)
 import java.util.*;
 
 public class Orders {

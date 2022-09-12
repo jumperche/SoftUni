@@ -1,5 +1,7 @@
 package SoftuniFundamentals;
-
+//You have a water tank with a capacity of 255 liters.
+//On the next n lines, you will receive liters of water, which you must pour into your tank.
+//If the capacity is not enough, print "Insufficient capacity!" and continue reading the next line. On the last line, print the liters in the tank.
 import java.util.*;
 
 public class WaterOfOverflow {
@@ -17,6 +19,7 @@ public class WaterOfOverflow {
             }
 
         }
+
         System.out.println (sum );
     }
 }

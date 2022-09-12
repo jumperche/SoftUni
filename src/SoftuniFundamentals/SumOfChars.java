@@ -1,5 +1,5 @@
 package SoftuniFundamentals;
-
+//Write a program that sums the ASCII codes of n characters. Print the sum on the console.
 import java.util.*;
 
 public class SumOfChars {

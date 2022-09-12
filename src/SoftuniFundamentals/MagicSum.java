@@ -1,5 +1,5 @@
 package SoftuniFundamentals;
-
+//Write a program that prints all unique pairs in an array of integers whose sum is equal to a given number.
 import java.util.*;
 
 public class MagicSum {

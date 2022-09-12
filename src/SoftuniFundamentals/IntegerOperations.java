@@ -1,5 +1,5 @@
 package SoftuniFundamentals;
-
+//Read four integer numbers. Add first to the second, divide (integer) the sum by the third number, and multiply the result by the fourth number. Print the result.
 import java.util.*;
 
 public class IntegerOperations {
