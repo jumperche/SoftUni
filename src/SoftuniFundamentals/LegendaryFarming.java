@@ -71,5 +71,5 @@ public class LegendaryFarming {
         for ( Map.Entry< String, Integer > entry : junkMaterials.entrySet ( ) ) {
             System.out.printf ( "%s: %d%n" , entry.getKey ( ) , entry.getValue ( ) );
         }
-    }//L+fhr8^a&PFp$v86
-}//antonia.gramatikov@o365.rs-rupertiwinkel.de
+    }
+}
