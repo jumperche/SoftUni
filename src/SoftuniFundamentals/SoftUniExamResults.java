@@ -36,8 +36,9 @@ public class SoftUniExamResults {
             } else {
 
                 for ( int i = 0 ; i < list.size ( ) ; i++ ) {
-
-                    if ( list.get ( i ).getName ( ).equals ( in[ 0 ] ) && list.get ( i ).getLanguage ( ).equals ( in[ 1 ] ) == true ) {
+int poin=list.get ( i ).getPoints ( );
+int poi=Integer.parseInt ( in[ 2 ] );
+                    if ( list.get ( i ).getName ( ).equals ( in[ 0 ] )==true && list.get ( i ).getLanguage ( ).equals ( in[ 1 ] ) == true ) {
                         if ( list.get ( i ).getPoints ( ) < Integer.parseInt ( in[ 2 ] ) ) {
                             Student st = new Student ( in[ 0 ] , in[ 1 ] , Integer.parseInt ( in[ 2 ] ) );
                             list.set ( i , st );
@@ -46,6 +47,7 @@ public class SoftUniExamResults {
                             ist = true;
                             Student st = new Student ( in[ 0 ] , in[ 1 ] , 0 );
                             list.add ( st );
+                            break;
                         }
 
                     }
@@ -88,6 +90,7 @@ public class SoftUniExamResults {
         }
         for (
                 Map.Entry< String, Integer > entry : resultMap.entrySet ( ) ) {
+
             System.out.printf ( "%s - %d%n" , entry.getKey ( ) , entry.getValue ( ) );
         }
     }
