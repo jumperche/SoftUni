@@ -14,6 +14,7 @@ package SoftuniFundamentals;
 //{language2} - {submissions_count}
 //…
 //{language3} - {submissions_count}"
+
 import java.util.*;
 
 public class SoftUniExamResults {
@@ -31,20 +32,12 @@ public class SoftUniExamResults {
                         list.set ( i , st );
                     }
                 }
-                ist=true;
+                ist = true;
             } else {
-                //int a = list.size ( );
-//                if(list.size ()==0){
-//                    Student st = new Student ( in[ 0 ] , in[ 1 ] , Integer.parseInt ( in[ 2 ] ) );
-//                    list.add ( st );
-//                }
+
                 for ( int i = 0 ; i < list.size ( ) ; i++ ) {
-                    //String na = list.get ( i ).getName ( );
-                   // String la = list.get ( i ).getLanguage ( );
-                   // boolean same = list.get ( i ).getName ( ).equals ( in[ 0 ] );
-                   // boolean same1 = list.get ( i ).getLanguage ( ).equals ( in[ 1 ] );
-                    //int po = list.get ( i ).getPoints ( );
-                    if ( list.get ( i ).getName ( ).equals ( in[ 0 ] )&& list.get ( i ).getLanguage ( ).equals ( in[ 1 ] ) == true ) {
+
+                    if ( list.get ( i ).getName ( ).equals ( in[ 0 ] ) && list.get ( i ).getLanguage ( ).equals ( in[ 1 ] ) == true ) {
                         if ( list.get ( i ).getPoints ( ) < Integer.parseInt ( in[ 2 ] ) ) {
                             Student st = new Student ( in[ 0 ] , in[ 1 ] , Integer.parseInt ( in[ 2 ] ) );
                             list.set ( i , st );
