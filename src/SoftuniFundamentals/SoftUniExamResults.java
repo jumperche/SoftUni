@@ -41,7 +41,8 @@ int poi=Integer.parseInt ( in[ 2 ] );
                     if ( list.get ( i ).getName ( ).equals ( in[ 0 ] )==true && list.get ( i ).getLanguage ( ).equals ( in[ 1 ] ) == true ) {
                         if ( list.get ( i ).getPoints ( ) < Integer.parseInt ( in[ 2 ] ) ) {
                             Student st = new Student ( in[ 0 ] , in[ 1 ] , Integer.parseInt ( in[ 2 ] ) );
-                            list.set ( i , st );
+                            Student low=new Student ( list.get ( i ).name,list.get ( i ).language,0  );
+                            list.set ( i , low);
 
                         } else {
                             ist = true;

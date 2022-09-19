@@ -27,9 +27,10 @@ public class LegendaryFarming {
 
         while ( true ) {
             List< String > input = (List< String >) Arrays.stream ( scanner.nextLine ( ).split ( " " ) ).collect ( Collectors.toList ( ) );
-            for ( int i = 0 ; i <= input.size ( ) + 1 ; i++ ) {
 
-                String help = input.get ( 1 ).toLowerCase ( Locale.ROOT );
+            for ( int i = 0 ; i <=input.size ( )+3 ; i++ ) {
+
+                String help = input.get ( 1 ).toLowerCase ();
                 int helper = Integer.parseInt ( input.get ( 0 ) );
                 if ( help.equals ( "shards" ) || help.equals ( "fragments" ) || help.equals ( "motes" ) ) {
                     //keyMaterials.putIfAbsent ( help , 0 );
@@ -50,6 +51,9 @@ public class LegendaryFarming {
                 } else if ( keyMaterials.get ( "motes" ) >= 250 ) {
                     break;
                 }
+if (input.size ()==0){
+    break;
+}
             }
             if ( keyMaterials.get ( "shards" ) >= 250 ) {
                 keyMaterials.put ( "shards" , keyMaterials.get ( "shards" ) - 250 );

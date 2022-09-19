@@ -13,9 +13,14 @@ public class SpiceMustFlow {
         int n = Integer.parseInt ( scanner.nextLine ( ) );
         int counter=0;
         int workers=0;
-        int sum=n;
+        int sum=0;
+        if (n>=100){
+            sum=n;
+        }
+
 
         while ( n>=100 ){
+
             sum=sum-26;
             n=n-10;
             if (n<100){

@@ -22,6 +22,7 @@ if (exist==null) {
 }
 else {
     exist.setAge (Integer.parseInt ( input.get ( 2 )));
+    String help=input.get ( 3);
     exist.setCity ( input.get ( 3) );
 }
 
@@ -70,9 +71,7 @@ public String getAll(){
 }
 
 
-        //public boolean isFrom( String city ) {
-         //   return this.city.equals ( city );
-        //}
+
         public static Student findStudent(List<Student>students,String firstName,String lastName){
             for ( int i = 0 ; i < students.size ( ) ; i++ ) {
                 Student s=students.get ( i );
@@ -87,7 +86,7 @@ public String getAll(){
         public void setAge (int age ) {
             this.age=age;
         }
-        public void setCity ( String citye ) {
+        public void setCity ( String city ) {
             this.city=city;
         }
     }

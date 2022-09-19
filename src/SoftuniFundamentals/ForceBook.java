@@ -47,6 +47,7 @@ public class ForceBook {
                 } else {
                     map.put ( in[ 1 ] , new ArrayList<> ( ) );
                     map.get ( in[ 1 ] ).add ( in[ 0 ] );
+                    System.out.printf ( "%s joins the %s side!%n" , in[ 0 ] , in[ 1 ] );
                 }
 
             }
