@@ -9,6 +9,7 @@ public class Main {
 
                Pet dog = new Pet("Ellias", 5, "Tim");
                System.out.println(dog);
+
                salon.add(dog);
                System.out.println(salon.remove("Ellias"));
                System.out.println(salon.remove("Pufa"));
