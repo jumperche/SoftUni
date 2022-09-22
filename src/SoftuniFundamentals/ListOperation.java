@@ -22,7 +22,7 @@ public class ListOperation {
                 case "Remove":
                     int value = Integer.parseInt ( command[ 1 ] );
                     //int index = Integer.parseInt ( command[ 2 ] );
-                    if ( value > list.size ( ) ) {
+                    if ( value > list.size ( )||value<0 ) {
                         System.out.println ( "Invalid index" );
                         break;
                     }
@@ -31,9 +31,9 @@ public class ListOperation {
                 case "Insert":
                     value = Integer.parseInt ( command[ 1 ] );
                     int index = Integer.parseInt ( command[ 2 ] );
-                    if ( index > list.size ( ) ) {
+                    if ( index > list.size ( ) ||index<0) {
                         System.out.println ( "Invalid index" );
-                        continue;
+                        break;
                     }
                     list.add ( index , value );
                     break;

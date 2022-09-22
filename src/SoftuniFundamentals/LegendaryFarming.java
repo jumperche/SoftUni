@@ -28,7 +28,7 @@ public class LegendaryFarming {
         while ( true ) {
             List< String > input = (List< String >) Arrays.stream ( scanner.nextLine ( ).split ( " " ) ).collect ( Collectors.toList ( ) );
 
-            for ( int i = 0 ; i <=input.size ( )+3 ; i++ ) {
+            for ( int i = 0 ; i <=input.size ( )+4 ; i++ ) {
 
                 String help = input.get ( 1 ).toLowerCase ();
                 int helper = Integer.parseInt ( input.get ( 0 ) );

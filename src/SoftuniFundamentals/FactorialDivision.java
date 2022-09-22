@@ -1,6 +1,8 @@
 package SoftuniFundamentals;
 
-import java.util.*;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.Scanner;
 
 //Read two integer numbers. Calculate the factorial of each number. Divide the first result by the second
 // and print the division formatted to the second decimal point.
@@ -11,8 +13,14 @@ public class FactorialDivision {
         int a = Integer.parseInt ( scanner.nextLine ( ) );
         int b = Integer.parseInt ( scanner.nextLine ( ) );
         long sumA=factorial ( a );
+        BigDecimal sA= BigDecimal.valueOf ( sumA );
         long sumB=factorial ( b );
-        double sum=sumA/sumB;
+        BigDecimal sB= BigDecimal.valueOf ( sumB );
+
+        //double sum=sumA/sumB;
+       BigDecimal sum=new BigDecimal ( 1.0 );
+
+       sum= sA.divide(sB,2, RoundingMode.HALF_UP);
         System.out.printf ("%.2f",sum);
 
     }
