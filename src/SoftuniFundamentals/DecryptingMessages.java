@@ -7,7 +7,7 @@ public class DecryptingMessages {
         Scanner scanner = new Scanner ( System.in );
         int key = Integer.parseInt ( scanner.nextLine ( ) );
         int line = Integer.parseInt ( scanner.nextLine ( ) );
-        String message="";
+        //String message="";
         String inputOut="";
         for ( int i = 0 ; i < line ; i++ ) {
             String input=scanner.nextLine ();
