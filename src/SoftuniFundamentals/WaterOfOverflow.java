@@ -12,7 +12,7 @@ public class WaterOfOverflow {
         int sum=0;
         for ( int i = 0 ; i < n ; i++ ) {
             int input = Integer.parseInt ( scanner.nextLine ( ) );
-            if ( tank - (sum+input) > 0 ) {
+            if ( tank - (sum+input) >= 0 ) {
                 sum = sum + input;
             } else {
                 System.out.println ( "Insufficient capacity!" );
