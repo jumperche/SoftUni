@@ -11,7 +11,7 @@ public class EqualsSum {
         for ( int i = 0 ; i < arr.length ; i++ ) {
             int sumLeft = 0;
             int sumRigth = 0;
-            if ( arr.length > 1 ) {
+
 
 
                 for ( int left = 0 ; left < i ; left++ ) {
@@ -22,23 +22,14 @@ public class EqualsSum {
                 }
                 if ( sumLeft == sumRigth ) {
                     counter = i;
+                    System.out.println (counter );
+                    return;
                 }
-            }
-            else {
-                counter=9;
-            }
+
+
         }
-        if (counter==9){
-            System.out.println ("0" );
-        }
-        else if (counter!=0){
-            System.out.println (counter );
-        }
-        else {
+
             System.out.println ("no" );
-        }
-
-
 
     }
 
