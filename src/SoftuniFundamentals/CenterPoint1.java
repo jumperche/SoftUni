@@ -10,7 +10,7 @@ package SoftuniFundamentals;
 //2
 import java.util.Scanner;
 
-public class CenterPoint {
+public class CenterPoint1 {
     public static void main ( String[] args ) {
         Scanner scanner = new Scanner ( System.in );
         int x1 = Integer.parseInt ( scanner.nextLine ( ) );
