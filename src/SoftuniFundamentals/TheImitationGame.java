@@ -26,7 +26,13 @@ public class TheImitationGame {
             switch (input[ 0 ]) {
 
                 case "ChangeAll":
-                    decode = decode.replaceAll ( command , input[ 2 ] );
+                    for ( int i = 0 ; i < code.length() ; i++ ) {
+                        String help=code.charAt(i)+"";
+                        if (help.equals ( input[1])){
+                            decode = decode.replace ( command , input[ 2 ] );
+                        }
+                    }
+
                     break;
                 case "Insert":
                     int index =Integer.parseInt ( input[ 1 ] ) ;
