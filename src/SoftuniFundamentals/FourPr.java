@@ -93,6 +93,7 @@ public class FourPr {
             mapStores.forEach((key, value) -> {
                 System.out.printf("%s:\n", key);
                 value.forEach(item -> System.out.printf(" - %s\n", item));
+
             });
     }
 }

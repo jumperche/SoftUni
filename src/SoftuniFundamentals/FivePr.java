@@ -64,4 +64,5 @@ public class FivePr {
            System.out.println (key+" - "+sum );
        });
     }
+
 }
