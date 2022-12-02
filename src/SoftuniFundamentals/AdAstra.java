@@ -37,5 +37,5 @@ public class AdAstra {
             String calorie = matcher.group ( "calorie" );
             System.out.printf ( "Item: %s, Best before: %s, Nutrition: %s%n" , name , date , calorie );
         }
-    }
+     }
 }
