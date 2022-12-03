@@ -19,15 +19,17 @@ public class Courses {
             input = (List< String >) Arrays.stream ( scanner.nextLine ( ).split ( " : " ) ).collect ( Collectors.toList ( ) );
     }
 
-//        for ( Map.Entry< String, List< String > > entry : map.entrySet ( ) ) {
-//            System.out.printf ( "%s: %d%n%s%n",entry.getKey (),entry.getValue ().size (),String.join ( "\n-- ",entry.getValue () ));
-//
-//        }
-        map.entrySet ( ).stream ( )
-                .forEach ( entry -> {
-                    System.out.printf ( "%s: %d%n" , entry.getKey ( ) , entry.getValue ( ).size ( ) );
-                    entry.getValue ( ).forEach ( player -> System.out.println ( "-- " + player ) );
-                } );
+//        map.entrySet ( ).stream ( )
+//                .forEach ( entry -> {
+//                    System.out.printf ( "%s: %d%n" , entry.getKey ( ) , entry.getValue ( ).size ( ) );
+//                    entry.getValue ( ).forEach ( player -> System.out.println ( "-- " + player ) );
+//                } );
+        map.entrySet ().stream ().sorted ((e1,e2)->Integer.compare ( e2.getValue ().size (),e1.getValue().size()) )
+        .forEach(entry-> {
+            System.out.printf ( "%s: %d%n" , entry.getKey ( ) , entry.getValue ( ).size ( ) );
+            entry.getValue ( ).stream ( ).sorted ( ( String::compareTo ) )
+                    .forEach ( student -> System.out.println ( "-- " + student ) );
+        });
 
     }
 }
