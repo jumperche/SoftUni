@@ -26,6 +26,7 @@ package SoftuniFundamentals;
 //Blue Algordox 65 1800 50
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -37,11 +38,11 @@ public class DragonArmy {
         Scanner scanner = new Scanner ( System.in );
         int n = Integer.parseInt ( scanner.nextLine ( ) );
         List< Dragon > list = new ArrayList<> ( );
-        List< String > color = new ArrayList<> ( );
+        List< String > types = new ArrayList<> ( );
         for ( int i = 0 ; i < n  ; i++ ) {
             String[] input = scanner.nextLine ( ).split ( " " );
             String name = input[ 1 ] + input[ 0 ];
-            String type = input[ 0 ];
+            String currentType = input[ 0 ];
             int damage ;
             int health ;
             int armor ;
@@ -60,7 +61,7 @@ public class DragonArmy {
             } else {
                 armor = Integer.parseInt ( input[ 4 ] );
             }
-            Dragon current = new Dragon ( input[ 1 ] , type , damage , health , armor );
+            Dragon current = new Dragon ( input[ 1 ] , currentType , damage , health , armor );
             for ( int j = 0 ; j < list.size ( ) ; j++ ) {
                 Dragon helper=list.get(j);
                 if ( helper.name.equals ( current.name )&helper.type.equals ( current.type ) ){
@@ -69,10 +70,10 @@ public class DragonArmy {
                 }
             }
             list.add ( current );
-            color.add ( type );
+            types.add ( currentType );
         }
 
-        List< String > dist = color.stream ( ).distinct ( ).toList ( ) ;
+        List< String > dist = types.stream ( ).distinct ( ).toList ( ) ;
         for ( int i = 0 ; i < dist.size ( ) ; i++ ) {
             double damage = 0;
             double health = 0;

@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 public class Judge {
     public static List< Student > list = new ArrayList<> ( );
     public static List< String > listContest = new ArrayList<> ( );
+   public static Map< String, Integer > rank = new TreeMap< String, Integer > ( );
 
     public static void main ( String[] args ) {
         Scanner scanner = new Scanner ( System.in );
@@ -41,11 +42,14 @@ public class Judge {
             input = scanner.nextLine ( ).split ( " -> " );
         }
         listContest = listContest.stream ( ).distinct ( ).collect ( Collectors.toList ( ) );
+
+
         for ( int i = 0 ; i < listContest.size ( ) ; i++ ) {
+
             printContest ( listContest.get ( i ),1 );
         }
         System.out.printf ( "Individual standings:%n" );
-        Map< String, Integer > rank = new TreeMap< String, Integer > ( );
+
         for ( int i = 0 ; i < list.size ( ) ; i++ ) {
 
             rank.put ( list.get ( i ).getName ( ) , list.get ( i ).getSum ( ) );
@@ -53,6 +57,7 @@ public class Judge {
         rank = rank.entrySet ( ).stream ( ).sorted ( Map.Entry.comparingByValue ( Comparator.reverseOrder ( ) ) )
                 .collect ( Collectors.toMap ( Map.Entry::getKey , Map.Entry::getValue , ( e1 , e2 ) -> e1 , LinkedHashMap::new ) );
         int index = 1;
+       // rank=rank.entrySet ().stream( ).sorted (Map.Entry.comparingByKey (Comparator.naturalOrder ())).collect ( Collectors.toMap(Map.Entry ::getKey,Map.Entry ::getValue,(a1,a2)->a1,LinkedHashMap ::new) );
         for ( Map.Entry< String, Integer > entry : rank.entrySet ( ) ) {
 
             System.out.printf ( "%d. %s -> %d%n" , index , entry.getKey ( ) , entry.getValue ( ) );
@@ -72,6 +77,8 @@ public class Judge {
 
         }
         System.out.printf ( "%s: %d participants%n" , contest , count );
+
+list.sort((Comparator.comparingInt ( Student ::getPoint ).reversed ()) );
         for ( int i = 0 ; i < list.size ( ) ; i++ ) {
 
             if ( list.get ( i ).contest.equals ( contest ) ) {
